@@ -5,8 +5,6 @@ import Header from './layouts/Header';
 import Dashboard from './dashboard/Dashboard';
 import ModuleView from './pages/ModuleView';
 import ReportsView from './pages/ReportsView';
-import AIChat from './components/AIChat';
-import LiveAssistant from './components/LiveAssistant';
 import Login from './pages/Login';
 import { ModuleType } from './types';
 import { NAVIGATION_ITEMS } from './constants';
@@ -26,10 +24,10 @@ const App: React.FC = () => {
     return <Login onLogin={() => setAuthVersion(v => v + 1)} />;
   }
 
-  const activeLabel = NAVIGATION_ITEMS.find(i => i.id === activeModule)?.label || 'Overview';
+  const activeLabel = NAVIGATION_ITEMS.find(i => i.id === activeModule)?.label || 'نمای کلی';
 
   return (
-    <div key={authVersion} className="flex h-screen overflow-hidden bg-[#fbfcfd] text-slate-900 font-sans selection:bg-blue-100">
+    <div key={authVersion} className="flex h-screen overflow-hidden bg-[#fbfcfd] text-slate-900 font-sans selection:bg-blue-100" dir="rtl">
       <Sidebar 
         activeModule={activeModule} 
         onSelectModule={setActiveModule} 
@@ -56,9 +54,6 @@ const App: React.FC = () => {
           </div>
         </main>
       </div>
-
-      <AIChat />
-      <LiveAssistant />
     </div>
   );
 };
