@@ -1,0 +1,8 @@
+{
+  "name": "Nexus ERP Cloud",
+  "description": "A comprehensive, AI-powered Enterprise Resource Planning system for managing sales, inventory, finances, and operations with intelligent insights.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
